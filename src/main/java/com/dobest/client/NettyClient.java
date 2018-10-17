@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class NettyClient {
+    private static int retryTimes = 0;
+
     public static void main(String[] args) {
         NioEventLoopGroup workGroup = new NioEventLoopGroup();
         Bootstrap bootstrap = new Bootstrap()
@@ -24,11 +26,21 @@ public class NettyClient {
                     }
                 });
 
+        connectServer(bootstrap);
+
+    }
+
+    private static void connectServer(Bootstrap bootstrap) {
         bootstrap.connect("localhost", 8000).addListener(future -> {
             if (future.isSuccess()) {
                 log.info("Client connect server success , server url:port {}:{}", "localhost", "8000");
             } else {
-                log.error("Client connect server failed");
+                log.warn("Client connect server failed, attempt retry times {}", retryTimes);
+                if (retryTimes++ < 3) {
+                    connectServer(bootstrap);
+                } else {
+                    log.error("Client connect error");
+                }
             }
         });
     }

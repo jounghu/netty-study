@@ -36,6 +36,7 @@ public class NettyServer {
     private static void bindPort(ServerBootstrap serverBootstrap, int initPort) {
         try {
             serverBootstrap.bind(initPort);
+            log.info("Netty Server start, bind port " + initPort);
         } catch (Exception e) {
             log.warn("连接失败，retry");
             serverBootstrap.bind(++initPort);

@@ -4,7 +4,6 @@
     <list default="true" id="8f250587-7031-445e-a15a-fc47874b0261" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/handler/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/handler/MessageHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,30 +24,30 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1491" />
-          <entry key="md" value="565" />
-          <entry key="txt" value="33" />
+          <entry key="md" value="593" />
+          <entry key="txt" value="48" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1502" />
-          <entry key="Markdown" value="554" />
-          <entry key="PLAIN_TEXT" value="33" />
+          <entry key="Markdown" value="582" />
+          <entry key="PLAIN_TEXT" value="48" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
@@ -153,27 +152,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://F:/DevTool/apache-maven-3.5.3/repo/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final-sources.jar!/io/netty/bootstrap/Bootstrap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
-              <folding>
-                <element signature="e#12127#12128#0" expanded="true" />
-                <element signature="e#12163#12164#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="652">
-                <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+              <first_editor relative-caret-position="432">
+                <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://F:/DevTool/apache-maven-3.5.3/repo/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="253" column="35" lean-forward="true" selection-start-line="253" selection-start-column="35" selection-end-line="253" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -304,10 +299,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="genli&#9;PSI&#9;JAVA://io.netty.util.concurrent.GenericFutureListener" />
+    <property name="SearchEverywhereHistoryKey" value="ByteBuf&#9;PSI&#9;JAVA://io.netty.buffer.ByteBuf&#10;genli&#9;PSI&#9;JAVA://io.netty.util.concurrent.GenericFutureListener" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539753823585" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539754300729" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v8.4.0/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -397,7 +392,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539744070463</updated>
-      <workItem from="1539744075544" duration="6871000" />
+      <workItem from="1539744075544" duration="7501000" />
     </task>
     <task id="LOCAL-00001" summary="[Add] NettyClient">
       <created>1539749166970</created>
@@ -420,11 +415,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539753378552</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[Update] README.md">
+      <created>1539753840879</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539753840879</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6871000" />
+    <option name="totallyTimeSpent" value="7501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -469,7 +471,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Add] NettyClient" />
     <MESSAGE value="[Add] 客户端与服务端双端通信" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Add] 客户端与服务端双端通信" />
+    <MESSAGE value="[Update] README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Update] README.md" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -579,11 +582,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://F:/DevTool/apache-maven-3.5.3/repo/io/netty/netty-all/4.1.6.Final/netty-all-4.1.6.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="253" column="35" lean-forward="true" selection-start-line="253" selection-start-column="35" selection-end-line="253" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="652">
-            <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
+          <first_editor relative-caret-position="432">
+            <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>

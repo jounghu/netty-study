@@ -1,7 +1,7 @@
-#### Netty 学习
+### Netty 学习
 
 
-##### 1. Netty Server启动
+#### 1. Netty Server启动
 
 ```java
         // 负责监听端口, accept新连接
@@ -30,7 +30,7 @@
 3. 指定Handler处理方式
 4. 绑定端口号
 
-##### 2. Netty Client启动
+#### 2. Netty Client启动
 
 ```java
         NioEventLoopGroup workGroup = new NioEventLoopGroup();
@@ -60,7 +60,7 @@
 3. 指定读写Handler
 4. 连接netty 服务器
 
-##### 3. Netty Client 与 Netty Server简单通信
+#### 3. Netty Client 与 Netty Server简单通信
 
 ```java
     @Slf4j
@@ -82,5 +82,29 @@
 
 1. 消息都通过ByteBuf这个数据结构来构造发送和读取
 2. 消息最好指定编码类型，不然无法序列化
+
+
+#### Netty ByteBuf 数据载体详解
+
+![image](https://user-gold-cdn.xitu.io/2018/8/5/1650817a1455afbb?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+ByteBuf包含:
+
+readIndex: 读指针索引位置
+
+writeIndex: 写指针索引位置
+
+capacity： 容量
+
+maxCapacity: 最大容量
+
+每读完一个字节 readIndex++
+
+每写入一个字节 writeIndex++
+
+当writeIndex == capacity时候，那么进行扩容
+
+当 capacity == maxCapacity 时候不可扩容，同时无法写入
+
 
 

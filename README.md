@@ -24,7 +24,7 @@
 ```
 
 
-##### 1. Netty Client启动
+##### 2. Netty Client启动
 
 ```java
         NioEventLoopGroup workGroup = new NioEventLoopGroup();

@@ -1,5 +1,6 @@
 package com.dobest.server;
 
+import com.dobest.handler.MessageHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -27,7 +28,7 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) {
-
+                        ch.pipeline().addLast(new MessageHandler());
                     }
                 });
         int initPort = 8000;

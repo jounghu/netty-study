@@ -1,5 +1,6 @@
 package com.dobest.client;
 
+import com.dobest.handler.SendMessageHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -22,7 +23,7 @@ public class NettyClient {
                 .handler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
-
+                        ch.pipeline().addLast(new SendMessageHandler());
                     }
                 });
 

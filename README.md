@@ -1,5 +1,6 @@
 ### Netty 学习
 
+来源声明(侵删): 代码还有部分参考图来自[Netty入门与实战](https://juejin.im/book/5b4bc28bf265da0f60130116/section/5b4db131e51d4519634fb867#heading-1)
 
 #### 1. Netty Server启动
 

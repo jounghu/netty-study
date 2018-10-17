@@ -18,7 +18,6 @@ public class MessageHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf) msg;
         log.info("收到消息: {}", byteBuf.toString(StandardCharsets.UTF_8));
-
         // 同时回复消息
         ByteBuf buffer = ctx.channel().alloc().buffer();
         buffer.writeBytes("你好，客户端，我是服务器1".getBytes(StandardCharsets.UTF_8));

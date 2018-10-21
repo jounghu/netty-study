@@ -108,4 +108,63 @@ maxCapacity: 最大容量
 当 capacity == maxCapacity 时候不可扩容，同时无法写入
 
 
+#### 自定义协议登录
 
+```text
+ByteBuf:
+
+MAGIC_NUM(4) int 用于探测协议是否真实
+
+VERSION(1) byte 用于版本更新
+
+ALG_NAME(1) byte 用于获取序列化器来序列化
+
+COMMAND(1) byte 用于获取协议体，用于反序列化
+
+LENGTH(4) int 用于获取协议内容长度
+
+DATA
+
+```
+
+```java
+public static Packet decode(ByteBuf byteBuf) {
+    
+        // 跳过魔数
+        byteBuf.skipBytes(4);
+        // 跳过版本
+        byteBuf.skipBytes(1);
+        
+        // 获取算法名字
+        byte algName = byteBuf.readByte();
+        
+        // 获取指令内容
+        byte command = byteBuf.readByte();
+
+        // 读取包体内容
+        int length = byteBuf.readInt();
+        
+        // 定义包体
+        byte[] dataBytes = new byte[length];
+        // 读取包体
+        byteBuf.readBytes(dataBytes);
+
+        // 通过指令获取包内容
+        Class<? extends Packet> requestType = getRequestType(command);
+        
+        // TODO algName 获取对应的Serializer
+        Packet o = (Packet) Serializer.DEFAULT.deSerialize(dataBytes, requestType);
+        return o;
+    }
+
+```
+
+总结，自定义协议进行登录:
+
+1. 定义好ByteBuf结构
+2. 按照ByteBuf填充
+3. 取出ALG用作序列化和反序列化
+4. 取出COMMAND反射获取包体
+5. 返回
+
+如果定义一个协议包，只需要集成Packet, 然后定义一下指令类型就好

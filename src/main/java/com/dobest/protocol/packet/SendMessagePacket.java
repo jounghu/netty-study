@@ -8,8 +8,10 @@ import lombok.Data;
  * @since: 2018/10/23 10:39
  */
 @Data
-public class MessagePacket extends Packet {
+public class SendMessagePacket extends Packet {
     String respMsg;
+
+    String fromId;
 
 
     @Override

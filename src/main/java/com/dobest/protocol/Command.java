@@ -16,4 +16,6 @@ public interface Command {
 
     Byte REQUEST_MSG = 4;
 
+    Byte RECIVE_MSG = 5;
+
 }

@@ -1,8 +1,6 @@
 package com.dobest.util;
 
-import com.dobest.protocol.codec.PacketCodec;
-import com.dobest.protocol.packet.MessagePacket;
-import io.netty.buffer.ByteBuf;
+import com.dobest.protocol.packet.SendMessagePacket;
 import io.netty.channel.Channel;
 
 import java.util.Scanner;
@@ -26,13 +24,9 @@ public class ConsoleThread extends Thread {
         while (true) {
             System.out.println("请发送消息(Stop to stop): ");
             String msg = scanner.nextLine();
-            if (msg.equals("stop")) {
-                break;
-            }
-            MessagePacket messagePacket = new MessagePacket();
+            SendMessagePacket messagePacket = new SendMessagePacket();
             messagePacket.setRespMsg(msg);
-            ByteBuf encode = PacketCodec.encode(this.channel.alloc().ioBuffer(), messagePacket);
-            this.channel.writeAndFlush(encode);
+            this.channel.writeAndFlush(messagePacket);
         }
 
     }

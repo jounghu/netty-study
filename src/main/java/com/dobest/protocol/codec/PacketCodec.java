@@ -1,10 +1,7 @@
 package com.dobest.protocol.codec;
 
 import com.dobest.protocol.Command;
-import com.dobest.protocol.packet.LoginPacket;
-import com.dobest.protocol.packet.LoginResponsePacket;
-import com.dobest.protocol.packet.MessagePacket;
-import com.dobest.protocol.packet.Packet;
+import com.dobest.protocol.packet.*;
 import com.dobest.protocol.serialize.Serializer;
 import io.netty.buffer.ByteBuf;
 
@@ -60,7 +57,9 @@ public class PacketCodec {
         } else if (command == Command.RESPONSE) {
             return LoginResponsePacket.class;
         } else if (command == Command.RESPONSE_MSG) {
-            return MessagePacket.class;
+            return SendMessagePacket.class;
+        } else if (command == Command.RECIVE_MSG) {
+            return ReciveMessagePacket.class;
         }
         return null;
     }

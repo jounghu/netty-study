@@ -1,11 +1,11 @@
 package com.dobest.server;
 
-import com.dobest.handler.AuthHandler;
-import com.dobest.handler.LoginHandlerEnhance;
-import com.dobest.handler.MessageHandlerEnhance;
 import com.dobest.protocol.Spiliter;
 import com.dobest.protocol.codec.PacketDecoder;
 import com.dobest.protocol.codec.PacketEncoder;
+import com.dobest.server.handler.AuthHandler;
+import com.dobest.server.handler.LoginRequestHandler;
+import com.dobest.server.handler.MessageHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -35,9 +35,9 @@ public class NettyServer {
                     protected void initChannel(NioSocketChannel ch) {
                         ch.pipeline().addLast(new Spiliter());
                         ch.pipeline().addLast(new PacketDecoder());
-                        ch.pipeline().addLast(new LoginHandlerEnhance());
+                        ch.pipeline().addLast(new LoginRequestHandler());
                         ch.pipeline().addLast(new AuthHandler());
-                        ch.pipeline().addLast(new MessageHandlerEnhance());
+                        ch.pipeline().addLast(new MessageHandler());
                         ch.pipeline().addLast(new PacketEncoder());
                     }
                 });

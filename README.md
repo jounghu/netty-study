@@ -172,7 +172,7 @@ public static Packet decode(ByteBuf byteBuf) {
 
 #### 使用Netty自带编码解码进行构建Pipeline
 
-上一接痛点:
+上一节痛点:
 
 1. channelRead(ChannelContext ctx,Object msg)
 
@@ -190,6 +190,6 @@ public static Packet decode(ByteBuf byteBuf) {
 
 1. 继承`ByteToMessageDecoder`
 
-2. 继承`SimpleChannelInboundHandler`
+2. 继承`SimpleChannelInboundHandler<I>`
 
 3. 继承`MessageToByteEncoder<I>`

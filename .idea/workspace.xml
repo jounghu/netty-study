@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f250587-7031-445e-a15a-fc47874b0261" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/handler/MessageHandlerEnhance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/codec/PacketDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/codec/PacketEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/packet/MessagePacket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/util/Attributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/util/ConsoleThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dobest/util/LoginUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/handler/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/handler/LoginHandlerEnhance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/handler/LoginResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/handler/LoginResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/codec/PacketCodec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/protocol/codec/PacketCodec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dobest/server/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dobest/server/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dobest/server/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dobest/server/NettyServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dobest/server/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dobest/server/NettyServer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,16 +28,16 @@
         <counts>
           <entry key="dummy" value="2" />
           <entry key="java" value="2814" />
-          <entry key="md" value="1069" />
-          <entry key="txt" value="48" />
+          <entry key="md" value="1074" />
+          <entry key="txt" value="84" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="2825" />
-          <entry key="Markdown" value="1058" />
-          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="Markdown" value="1063" />
+          <entry key="PLAIN_TEXT" value="86" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -172,8 +156,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="675">
-                <caret line="194" column="30" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="30" />
+              <first_editor relative-caret-position="631">
+                <caret line="192" column="36" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
               </first_editor>
               <second_editor />
             </state>
@@ -361,7 +345,7 @@
     <property name="SearchEverywhereHistoryKey" value="SimpleChannelInboundHandler&#9;PSI&#9;JAVA://io.netty.channel.SimpleChannelInboundHandler&#10;ByteBuf&#9;PSI&#9;JAVA://io.netty.buffer.ByteBuf&#10;genli&#9;PSI&#9;JAVA://io.netty.util.concurrent.GenericFutureListener" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540271851712" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540271970252" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v8.4.0/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -460,7 +444,7 @@
       <updated>1539744070463</updated>
       <workItem from="1539744075544" duration="7501000" />
       <workItem from="1540260627924" duration="685000" />
-      <workItem from="1540261542925" duration="7463000" />
+      <workItem from="1540261542925" duration="7581000" />
     </task>
     <task id="LOCAL-00001" summary="[Add] NettyClient">
       <created>1539749166970</created>
@@ -497,11 +481,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539754677630</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[Update] netty codec construct pipeline">
+      <created>1540271893287</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1540271893287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15759000" />
+    <option name="totallyTimeSpent" value="15877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -547,7 +538,8 @@
     <MESSAGE value="[Add] NettyClient" />
     <MESSAGE value="[Add] 客户端与服务端双端通信" />
     <MESSAGE value="[Update] README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Update] README.md" />
+    <MESSAGE value="[Update] netty codec construct pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Update] netty codec construct pipeline" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -944,8 +936,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="675">
-            <caret line="194" column="30" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="30" />
+          <first_editor relative-caret-position="631">
+            <caret line="192" column="36" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>

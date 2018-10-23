@@ -197,4 +197,52 @@ public static Packet decode(ByteBuf byteBuf) {
 
 ### 拆包器和可拔插Pipeline
 
-[自定义协议登录](###自定义协议登录)
+1. 拆包器
+
+ 自定义协议登录中，我们设计了MAGIC_NUM,当我们遇到构造协议，那么可以中断连接
+
+```java
+public class Spiliter extends LengthFieldBasedFrameDecoder {
+
+    // MAGIC(4) + VERSION(1) + COMMAND(1) + ALG_NAME(1)
+
+    private static final int LENGTH_FIELD_OFFSET = 7;
+
+    // DATA_LENGTH(4)
+
+    private static final int LENGTH_DATA_LENGTH = 4;
+
+
+    public Spiliter() {
+        super(Integer.MAX_VALUE, LENGTH_FIELD_OFFSET, LENGTH_DATA_LENGTH);
+    }
+
+    @Override
+    protected Object decode(ChannelHandlerContext ctx, ByteBuf in) throws Exception {
+        if (in.getInt(in.readerIndex()) != PacketCodec.MAGINC_NUM) {
+            ctx.channel().close();
+            return null;
+        }
+        return super.decode(ctx, in);
+    }
+}
+
+```
+
+2. 可拔插
+
+当已经登录，就没有必要重新验证
+
+ctx.pipeline.remove(this)
+
+```java
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        if (!LoginUtil.isLogin(ctx.channel())) {
+            ctx.channel().close();
+        } else {
+            ctx.pipeline().remove(this);
+            super.channelRead(ctx, msg);
+        }
+    }
+```

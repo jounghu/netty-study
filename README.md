@@ -250,8 +250,6 @@ ctx.pipeline.remove(this)
 
 ### 多客户端互聊
 
-遇到
-
 
 1. 客户端连上服务端获取Channel
 

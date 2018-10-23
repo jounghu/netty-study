@@ -3,6 +3,7 @@ package com.dobest.protocol.codec;
 import com.dobest.protocol.Command;
 import com.dobest.protocol.packet.LoginPacket;
 import com.dobest.protocol.packet.LoginResponsePacket;
+import com.dobest.protocol.packet.MessagePacket;
 import com.dobest.protocol.packet.Packet;
 import com.dobest.protocol.serialize.Serializer;
 import io.netty.buffer.ByteBuf;
@@ -58,6 +59,8 @@ public class PacketCodec {
             return LoginPacket.class;
         } else if (command == Command.RESPONSE) {
             return LoginResponsePacket.class;
+        } else if (command == Command.RESPONSE_MSG) {
+            return MessagePacket.class;
         }
         return null;
     }

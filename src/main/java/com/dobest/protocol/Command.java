@@ -12,4 +12,8 @@ public interface Command {
 
     Byte RESPONSE = 2;
 
+    Byte RESPONSE_MSG = 3;
+
+    Byte REQUEST_MSG = 4;
+
 }

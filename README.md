@@ -168,3 +168,28 @@ public static Packet decode(ByteBuf byteBuf) {
 5. 返回
 
 如果定义一个协议包，只需要集成Packet, 然后定义一下指令类型就好
+
+
+#### 使用Netty自带编码解码进行构建Pipeline
+
+上一接痛点:
+
+1. channelRead(ChannelContext ctx,Object msg)
+
+    - 这个Msg是Object类型,每次都需要手动转为ByteBuf,然后进行解码
+
+2. 解码之后需要 instanceof 去判断是哪种类型，然后转为对应的协议
+
+3. 编码同理也是需要手动进行 ctx.alloc().ioBuff() 
+
+    - ctx.alloc().ioBuff() 使用堆外内存，随着应用无限增大，显然内存泄漏
+
+    - 这个堆外内存是需要手动进行释放，人工释放麻烦
+    
+总结针对以上三个痛点:
+
+1. 继承`ByteToMessageDecoder`
+
+2. 继承`SimpleChannelInboundHandler`
+
+3. 继承`MessageToByteEncoder<I>`

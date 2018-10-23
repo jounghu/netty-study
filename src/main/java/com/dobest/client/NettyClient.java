@@ -2,6 +2,7 @@ package com.dobest.client;
 
 import com.dobest.handler.LoginResponseHandler;
 import com.dobest.handler.MessageHandlerEnhance;
+import com.dobest.protocol.Spiliter;
 import com.dobest.protocol.codec.PacketDecoder;
 import com.dobest.protocol.codec.PacketEncoder;
 import io.netty.bootstrap.Bootstrap;
@@ -26,6 +27,7 @@ public class NettyClient {
                 .handler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
+                        ch.pipeline().addLast(new Spiliter());
                         ch.pipeline().addLast(new PacketDecoder());
                         ch.pipeline().addLast(new LoginResponseHandler());
                         ch.pipeline().addLast(new MessageHandlerEnhance());

@@ -11,6 +11,7 @@ import lombok.Data;
 public class MessagePacket extends Packet {
     String respMsg;
 
+
     @Override
     public Byte getCommand() {
         return Command.RESPONSE_MSG;

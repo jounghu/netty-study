@@ -2,7 +2,7 @@
 
 来源声明(侵删): 代码还有部分参考图来自[Netty入门与实战](https://juejin.im/book/5b4bc28bf265da0f60130116/section/5b4db131e51d4519634fb867#heading-1)
 
-#### 1. Netty Server启动
+### 1. Netty Server启动
 
 ```java
         // 负责监听端口, accept新连接
@@ -31,7 +31,7 @@
 3. 指定Handler处理方式
 4. 绑定端口号
 
-#### 2. Netty Client启动
+### 2. Netty Client启动
 
 ```java
         NioEventLoopGroup workGroup = new NioEventLoopGroup();
@@ -61,7 +61,7 @@
 3. 指定读写Handler
 4. 连接netty 服务器
 
-#### 3. Netty Client 与 Netty Server简单通信
+### 3. Netty Client 与 Netty Server简单通信
 
 ```java
     @Slf4j
@@ -85,7 +85,7 @@
 2. 消息最好指定编码类型，不然无法序列化
 
 
-#### Netty ByteBuf 数据载体详解
+### Netty ByteBuf 数据载体详解
 
 ![image](https://user-gold-cdn.xitu.io/2018/8/5/1650817a1455afbb?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
@@ -108,7 +108,7 @@ maxCapacity: 最大容量
 当 capacity == maxCapacity 时候不可扩容，同时无法写入
 
 
-#### 自定义协议登录
+### 自定义协议登录
 
 ```text
 ByteBuf:
@@ -170,7 +170,7 @@ public static Packet decode(ByteBuf byteBuf) {
 如果定义一个协议包，只需要集成Packet, 然后定义一下指令类型就好
 
 
-#### 使用Netty自带编码解码进行构建Pipeline
+### 使用Netty自带编码解码进行构建Pipeline
 
 上一节痛点:
 
@@ -193,3 +193,8 @@ public static Packet decode(ByteBuf byteBuf) {
 2. 继承`SimpleChannelInboundHandler<I>`
 
 3. 继承`MessageToByteEncoder<I>`
+
+
+### 拆包器和可拔插Pipeline
+
+[自定义协议登录](###自定义协议登录)

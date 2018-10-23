@@ -16,7 +16,7 @@ import io.netty.buffer.ByteBuf;
  */
 public class PacketCodec {
 
-    private static final int MAGINC_NUM = 150_6187;
+    public static final int MAGINC_NUM = 150_6187;
 
     // 自定义协议  MAGIC_NUM(4) + VERSION(1) + ALG_NAME(1) + COMMAND(1) + DATA_LENGTH(4) + DATA_BODY
 

@@ -24,7 +24,7 @@ public class ConsoleThread extends Thread {
     public void run() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("请发送消息给客户端(Stop to stop): ");
+            System.out.println("请发送消息(Stop to stop): ");
             String msg = scanner.nextLine();
             if (msg.equals("stop")) {
                 break;
